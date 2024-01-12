@@ -1,0 +1,66 @@
+[submodule "antispam"]
+	path = antispam
+	url = https://github.com/shagu/antispam.git
+[submodule "pfQuest"]
+	path = pfQuest
+	url = https://github.com/shagu/pfQuest.git
+[submodule "pfUI"]
+	path = pfUI
+	url = https://github.com/shagu/pfUI.git
+[submodule "pfQuest-turtle"]
+	path = pfQuest-turtle
+	url = https://github.com/shagu/pfQuest-turtle.git
+[submodule "aux-addon"]
+	path = aux-addon
+	url = https://github.com/shirsig/aux-addon-vanilla.git
+[submodule "Banana"]
+	path = Banana
+	url = git@github.com:webdkpthroaway/banana.git
+[submodule "BetterCharacterStats"]
+	path = BetterCharacterStats
+	url = git@github.com:Lexiebean/BetterCharacterStats.git
+[submodule "BigWigs"]
+	path = BigWigs
+	url = https://github.com/madScripting/BigWigs-TurtleWoW.git
+[submodule "Cartographer"]
+	path = Cartographer
+	url = git@github.com:Haaxor1689/Cartographer.git
+[submodule "Cleanup"]
+	path = Cleanup
+	url = git@github.com:shirsig/Cleanup-vanilla.git
+[submodule "crafty"]
+	path = crafty
+	url = git@github.com:shirsig/crafty.git
+[submodule "Decursive"]
+	path = Decursive
+	url = git@github.com:Lexiebean/Decursive.git
+[submodule "Mail"]
+	path = Mail
+	url = git@github.com:EinBaum/Mail.git
+[submodule "ModifiedPowerAuras"]
+	path = ModifiedPowerAuras
+	url = git@github.com:Geigerkind/ModifiedPowerAuras.git
+[submodule "Outfitter"]
+	path = Outfitter
+	url = git@github.com:Lexiebean/Outfitter.git
+[submodule "PallyPower"]
+	path = PallyPower
+	url = git@github.com:Lexiebean/PallyPower.git
+[submodule "pfUI-turtle"]
+	path = pfUI-turtle
+	url = git@github.com:Lexiebean/pfUI-turtle.git
+[submodule "QuestHaste"]
+	path = QuestHaste
+	url = git@github.com:WobLight/QuestHaste.git
+[submodule "Quiver"]
+	path = Quiver
+	url = git@github.com:SabineWren/Quiver.git
+[submodule "SmartBuff"]
+	path = SmartBuff
+	url = git@github.com:Lexiebean/SmartBuff.git
+[submodule "SortBags"]
+	path = SortBags
+	url = git@github.com:refaim/SortBags.git
+[submodule "TWThreat"]
+	path = TWThreat
+	url = git@github.com:CosminPOP/TWThreat.git
