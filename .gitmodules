@@ -64,3 +64,6 @@
 [submodule "TWThreat"]
 	path = TWThreat
 	url = git@github.com:CosminPOP/TWThreat.git
+[submodule "AtlasLoot"]
+	path = AtlasLoot
+	url = git@github.com:Lexiebean/AtlasLoot.git
