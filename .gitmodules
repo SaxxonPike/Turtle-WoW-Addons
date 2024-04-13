@@ -45,7 +45,7 @@
 	url = https://github.com/Lexiebean/Outfitter.git
 [submodule "PallyPower"]
 	path = PallyPower
-	url = https://github.com/Lexiebean/PallyPower.git
+	url = https://github.com/madScripting/PallyPower-TurtleWoW.git
 [submodule "pfUI-turtle"]
 	path = pfUI-turtle
 	url = https://github.com/Lexiebean/pfUI-turtle.git
@@ -64,3 +64,6 @@
 [submodule "AtlasLoot"]
 	path = AtlasLoot
 	url = https://github.com/Lexiebean/AtlasLoot.git
+[submodule "SnagaLoa"]
+	path = SnagaLoa
+	url = https://github.com/madScripting/SnaguLoatheb-TurtleWoW.git
