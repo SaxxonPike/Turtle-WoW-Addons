@@ -49,9 +49,6 @@
 [submodule "pfUI-turtle"]
 	path = pfUI-turtle
 	url = https://github.com/Lexiebean/pfUI-turtle.git
-[submodule "QuestHaste"]
-	path = QuestHaste
-	url = https://github.com/WobLight/QuestHaste.git
 [submodule "Quiver"]
 	path = Quiver
 	url = https://github.com/SabineWren/Quiver.git
