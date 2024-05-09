@@ -37,9 +37,6 @@
 [submodule "Mail"]
 	path = Mail
 	url = https://github.com/EinBaum/Mail.git
-[submodule "ModifiedPowerAuras"]
-	path = ModifiedPowerAuras
-	url = https://github.com/Geigerkind/ModifiedPowerAuras.git
 [submodule "Outfitter"]
 	path = Outfitter
 	url = https://github.com/Lexiebean/Outfitter.git
@@ -52,9 +49,6 @@
 [submodule "Quiver"]
 	path = Quiver
 	url = https://github.com/SabineWren/Quiver.git
-[submodule "SmartBuff"]
-	path = SmartBuff
-	url = https://github.com/Lexiebean/SmartBuff.git
 [submodule "SortBags"]
 	path = SortBags
 	url = https://github.com/refaim/SortBags.git
