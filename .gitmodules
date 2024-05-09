@@ -61,3 +61,6 @@
 [submodule "SnagaLoa"]
 	path = SnagaLoa
 	url = https://github.com/madScripting/SnaguLoatheb-TurtleWoW.git
+[submodule "ModifiedPowerAuras"]
+	path = ModifiedPowerAuras
+	url = https://github.com/Berranzan/ModifiedPowerAuras-Continued.git
