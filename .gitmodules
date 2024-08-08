@@ -39,7 +39,7 @@
 	url = https://github.com/EinBaum/Mail.git
 [submodule "Outfitter"]
 	path = Outfitter
-	url = https://github.com/Lexiebean/Outfitter.git
+	url = https://github.com/pepopo978/Outfitter
 [submodule "PallyPower"]
 	path = PallyPower
 	url = https://github.com/madScripting/PallyPower-TurtleWoW.git
