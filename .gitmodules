@@ -64,3 +64,6 @@
 [submodule "ModifiedPowerAuras"]
 	path = ModifiedPowerAuras
 	url = https://github.com/Berranzan/ModifiedPowerAuras-Continued.git
+[submodule "SuperAPI"]
+	path = SuperAPI
+	url = https://github.com/balakethelock/SuperAPI.git
