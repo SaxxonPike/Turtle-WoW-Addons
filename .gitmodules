@@ -33,7 +33,7 @@
 	url = https://github.com/shirsig/crafty.git
 [submodule "Decursive"]
 	path = Decursive
-	url = https://github.com/Lexiebean/Decursive.git
+	url = https://github.com/MarcelineVQ/Decursive
 [submodule "Mail"]
 	path = Mail
 	url = https://github.com/EinBaum/Mail.git
@@ -67,3 +67,6 @@
 [submodule "SuperAPI"]
 	path = SuperAPI
 	url = https://github.com/balakethelock/SuperAPI.git
+[submodule "SuperWowCombatLogger"]
+	path = SuperWowCombatLogger
+	url = https://github.com/pepopo978/SuperWowCombatLogger
