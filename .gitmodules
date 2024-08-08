@@ -15,7 +15,7 @@
 	url = https://github.com/shirsig/aux-addon-vanilla.git
 [submodule "Banana"]
 	path = Banana
-	url = https://github.com/webdkpthroaway/banana.git
+	url = https://github.com/balakethelock/bananabar
 [submodule "BetterCharacterStats"]
 	path = BetterCharacterStats
 	url = https://github.com/pepopo978/BetterCharacterStats
