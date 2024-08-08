@@ -54,7 +54,7 @@
 	url = https://github.com/refaim/SortBags.git
 [submodule "TWThreat"]
 	path = TWThreat
-	url = https://github.com/CosminPOP/TWThreat.git
+	url = https://github.com/balakethelock/TWThreat
 [submodule "AtlasLoot"]
 	path = AtlasLoot
 	url = https://github.com/Lexiebean/AtlasLoot.git
