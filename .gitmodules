@@ -18,10 +18,10 @@
 	url = https://github.com/webdkpthroaway/banana.git
 [submodule "BetterCharacterStats"]
 	path = BetterCharacterStats
-	url = https://github.com/Lexiebean/BetterCharacterStats.git
+	url = https://github.com/pepopo978/BetterCharacterStats
 [submodule "BigWigs"]
 	path = BigWigs
-	url = https://github.com/madScripting/BigWigs-TurtleWoW.git
+	url = https://github.com/pepopo978/BigWigs
 [submodule "Cartographer"]
 	path = Cartographer
 	url = https://github.com/Haaxor1689/Cartographer.git
