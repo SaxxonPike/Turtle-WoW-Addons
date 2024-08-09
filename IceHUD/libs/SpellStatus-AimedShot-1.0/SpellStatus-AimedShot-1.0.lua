@@ -1,16 +1,16 @@
 --[[
 Name: SpellStatus-AimedShot-1.0
-Revision: $Rev: 13085 $
+Revision: $Rev: 14285 $
 Author(s): Nightdew (denzsolnightdew@gmail.com)
 Website: http://www.wowace.com/index.php/SpellStatus-1.0
 Documentation: http://www.wowace.com/index.php/SpellStatus-1.0
 SVN: http://svn.wowace.com/root/trunk/SpellStatus/SpellStatus-AimedShot-1.0
 Description: Addon library for SpellStatus-1.0 to allow support for Hunter's Aimed Shot
-Dependencies: AceLibrary, AceDebug-2.0, AceEvent-2.0, Babble-Spell-2.0, SpellCache-1.0, SpellStatus-1.0
+Dependencies: AceLibrary, AceDebug-2.0, AceEvent-2.0, Babble-Spell-2.2, SpellCache-1.0, SpellStatus-1.0
 ]]
 
 local MAJOR_VERSION = "SpellStatus-AimedShot-1.0"
-local MINOR_VERSION = "$Revision: 13085 $"
+local MINOR_VERSION = "$Revision: 14285 $"
 
 local localizedClass, englishClass = UnitClass("player");
 if (englishClass ~= "HUNTER") then
@@ -27,7 +27,7 @@ elseif (not AceLibrary:HasInstance("AceDebug-2.0")) then
 	error(MAJOR_VERSION .. " requires AceDebug-2.0")
 elseif (not AceLibrary:HasInstance("AceEvent-2.0")) then 
 	error(MAJOR_VERSION .. " requires AceEvent-2.0")
-elseif (not AceLibrary:HasInstance("Babble-Spell-2.0")) then 
+elseif (not AceLibrary:HasInstance("Babble-Spell-2.0") and not AceLibrary:HasInstance("Babble-Spell-2.2")) then 
 	error(MAJOR_VERSION .. " requires Babble-Spell-2.0")
 elseif (not AceLibrary:HasInstance("SpellCache-1.0")) then 
 	error(MAJOR_VERSION .. " requires SpellCache-1.0")
@@ -36,7 +36,7 @@ elseif (not AceLibrary:HasInstance("SpellStatus-1.0")) then
 end
 
 local gratuity = AceLibrary("Gratuity-2.0")
-local babbleSpell = AceLibrary("Babble-Spell-2.0")
+local babbleSpell = AceLibrary:HasInstance("Babble-Spell-2.2") and AceLibrary("Babble-Spell-2.2") or AceLibrary("Babble-Spell-2.0")
 local spellCache = AceLibrary("SpellCache-1.0")
 
 --
@@ -97,7 +97,7 @@ function SpellStatusAimedShot:SpellCache_Updated()
 
 	self:UNIT_INVENTORY_CHANGED("player")
 
-	local spellName = babbleSpell:GetTranslation("Aimed Shot")
+	local spellName = babbleSpell["Aimed Shot"]
 	local _, _, _, _, _, sIdStart, sIdStop = spellCache:GetSpellData(spellName)
 	
 	self.IdStart = sIdStart

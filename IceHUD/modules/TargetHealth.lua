@@ -1,6 +1,6 @@
 local AceOO = AceLibrary("AceOO-2.0")
 
-local TargetHealth = AceOO.Class(IceUnitBar, "AceHook-2.0")
+local TargetHealth = AceOO.Class(IceUnitBar, "AceHook-2.1")
 
 TargetHealth.prototype.color = nil
 

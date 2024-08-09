@@ -1,16 +1,16 @@
 --[[
 Name: SpellStatus-1.0
-Revision: $Rev: 12283 $
+Revision: $Rev: 14589 $
 Author(s): Nightdew (denzsolnightdew@gmail.com)
 Website: http://www.wowace.com/index.php/SpellStatus-1.0
 Documentation: http://www.wowace.com/index.php/SpellStatus-1.0
 SVN: http://svn.wowace.com/root/trunk/SpellStatusLib/SpellStatus-1.0
 Description: Status library that simplifies retrieving spell status information from the player
-Dependencies: AceLibrary, AceDebug-2.0, AceEvent-2.0, AceHook-2.0, Deformat-2.0, Gratuity-2.0, SpellCache-1.0, (optional) SpellStatus-AimedShot-1.0
+Dependencies: AceLibrary, AceDebug-2.0, AceEvent-2.0, AceHook-2.1, Deformat-2.0, Gratuity-2.0, SpellCache-1.0, (optional) SpellStatus-AimedShot-1.0
 ]]
 
 local MAJOR_VERSION = "SpellStatus-1.0"
-local MINOR_VERSION = "$Revision: 12283 $"
+local MINOR_VERSION = "$Revision: 14589 $"
 
 if (not AceLibrary) then 
 	error(MAJOR_VERSION .. " requires AceLibrary.") 
@@ -31,7 +31,7 @@ end
 local dependencyLibraries = {
 	"AceDebug-2.0", 
 	"AceEvent-2.0", 
-	"AceHook-2.0", 
+	"AceHook-2.1", 
 	"Deformat-2.0", 
 	"Gratuity-2.0", 
 	"SpellCache-1.0"
@@ -49,7 +49,7 @@ local SpellStatus = {}
 --Embed all needed mixins into the Library Object SpellStatus
 AceLibrary("AceDebug-2.0"):embed(SpellStatus)
 AceLibrary("AceEvent-2.0"):embed(SpellStatus)
-AceLibrary("AceHook-2.0"):embed(SpellStatus)
+AceLibrary("AceHook-2.1"):embed(SpellStatus)
 
 --
 -- Local functions not to be called from outside
@@ -435,7 +435,7 @@ function CastOriginal(self, methodName, param1, param2, param3, sId, sName, sRan
 	ResetCastOriginal(self, sId, sName, sRank, sFullName)	
 
 	self:LevelDebug(3, "-> CastOriginal")
-	self.hooks[methodName].orig(param1, param2, param3)
+	self.hooks[methodName](param1, param2, param3)
 	self:LevelDebug(3, "<- CastOriginal")
 
 	TriggerFailureEvent(self)
@@ -500,14 +500,14 @@ function SpellStatus:UseAction(slotId, checkCursor, onSelf)
 	--self:LevelDebug(2, "UseAction", actionText, tostring(isMacro))
 	
 	if (isMacro) then
-		self.hooks["UseAction"].orig(slotId, checkCursor, onSelf)
+		self.hooks["UseAction"](slotId, checkCursor, onSelf)
 	else
 		gratuity:SetAction(slotId)
 		local sId, sName, sRank, sFullName = GetGratuitySpellData(self, slotId)
 		if (sName) then
 			CastOriginal(self, "UseAction", slotId, checkCursor, onSelf, sId, sName, sRank, sFullName)
 		else
-			self.hooks["UseAction"].orig(slotId, checkCursor, onSelf)
+			self.hooks["UseAction"](slotId, checkCursor, onSelf)
 		end
 	end
 
@@ -522,7 +522,7 @@ function SpellStatus:CastShapeshiftForm(index)
 	if (sName) then
 		CastOriginal(self, "CastShapeshiftForm", index, nil, nil, sId, sName, sRank, sFullName)
 	else
-		self.hooks["CastShapeshiftForm"].orig(index)
+		self.hooks["CastShapeshiftForm"](index)
 	end
 	
 	self:LevelDebug(2, "<<<< CastShapeshiftForm", index)
@@ -551,7 +551,7 @@ function SpellStatus:UseInventoryItem(slotId)
 	if (itemLink) then
 		CastOriginal(self, "UseInventoryItem", slotId, nil, nil, nil, itemName, nil, itemLink)
 	else
-		self.hooks["UseInventoryItem"].orig(slotId)
+		self.hooks["UseInventoryItem"](slotId)
 	end
 	
 	self:LevelDebug(2, "<<<< UseInventoryItem", slotId)
@@ -565,7 +565,7 @@ function SpellStatus:UseContainerItem(bagId, slotId)
 	if (itemLink) then
 		CastOriginal(self, "UseContainerItem", bagId, slotId, nil, nil, itemName, nil, itemLink)
 	else
-		self.hooks["UseContainerItem"].orig(bagId, slotId)
+		self.hooks["UseContainerItem"](bagId, slotId)
 	end
 	
 	self:LevelDebug(2, "<<<< UseContainerItem", bagId, slotId)
@@ -579,7 +579,7 @@ function SpellStatus:ToggleGameMenu()
 	self.vars.CancelCasting = self.vars.Casting
 	self.vars.CancelChanneling = self.vars.Channeling
 
-	self.hooks["ToggleGameMenu"].orig()
+	self.hooks["ToggleGameMenu"]()
 
 	self.vars.CancelTargeting = false
 	self.vars.CancelCasting = false
@@ -593,7 +593,7 @@ function SpellStatus:SpellStopCasting()
 	if (self:IsCastingOrChanneling()) then
 		self.vars.SpellStopCastingActiveName = self.vars.ActiveName
 	end
-	self.hooks["SpellStopCasting"].orig()
+	self.hooks["SpellStopCasting"]()
 	self:LevelDebug(2, "<<<< SpellStopCasting")
 end
 

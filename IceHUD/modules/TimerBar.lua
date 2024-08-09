@@ -1,6 +1,6 @@
 local AceOO = AceLibrary("AceOO-2.0")
 
-local TimerBar = AceOO.Class(IceBarElement, "AceHook-2.0")
+local TimerBar = AceOO.Class(IceBarElement, "AceHook-2.1")
 local abacus = nil
 
 
