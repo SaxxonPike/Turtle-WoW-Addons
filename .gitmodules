@@ -49,6 +49,7 @@
 [submodule "Quiver"]
 	path = Quiver
 	url = https://github.com/SabineWren/Quiver.git
+	branch = latest-release
 [submodule "SortBags"]
 	path = SortBags
 	url = https://github.com/refaim/SortBags.git
