@@ -73,3 +73,9 @@
 [submodule "aDF"]
 	path = aDF
 	url = https://github.com/MarcelineVQ/aDF.git
+[submodule "ShaguDPS"]
+	path = ShaguDPS
+	url = https://github.com/shagu/ShaguDPS.git
+[submodule "LootBlare"]
+	path = LootBlare
+	url = https://github.com/MarcelineVQ/LootBlare.git
