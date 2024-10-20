@@ -33,7 +33,7 @@
 	url = https://github.com/shirsig/crafty.git
 [submodule "Decursive"]
 	path = Decursive
-	url = https://github.com/MarcelineVQ/Decursive
+	url = https://github.com/MarcelineVQ/Decursive.git
 [submodule "Mail"]
 	path = Mail
 	url = https://github.com/EinBaum/Mail.git
@@ -80,3 +80,6 @@
 [submodule "LootBlare"]
 	path = LootBlare
 	url = https://github.com/MarcelineVQ/LootBlare.git
+[submodule "ShaguScan"]
+	path = ShaguScan
+	url = https://github.com/shagu/ShaguScan.git
